@@ -1,5 +1,4 @@
-﻿using Authentication.Domain.Dto;
-using Authentication.Domain.Entities;
+﻿using Authentication.Domain.Entities;
 using Authentication.Domain.Interfaces.Services;
 using Authentication.Shared.Dto;
 using Microsoft.AspNetCore.Identity;
