@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Authentication.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Authentication.Data.Context
 {
@@ -7,6 +8,8 @@ namespace Authentication.Data.Context
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+
+        public virtual DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Authentication.Shared.Base.Repository
+namespace Authentication.Data.Repositories.Base
 {
     public interface IRepositoryBase<TEntity, in TId> where TEntity : class where TId : struct
     {

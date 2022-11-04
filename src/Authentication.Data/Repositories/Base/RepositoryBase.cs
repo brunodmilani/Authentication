@@ -1,8 +1,9 @@
 ﻿using Authentication.Data.Context;
+using Authentication.Shared.Base;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace Authentication.Shared.Base.Repository
+namespace Authentication.Data.Repositories.Base
 {
     public class RepositoryBase<TEntity, TId> : IRepositoryBase<TEntity, TId> where TEntity : EntityBase where TId : struct
     {
