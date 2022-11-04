@@ -25,12 +25,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Authentication.Data\Authentication.Data.csproj" />
-    <ProjectReference Include="..\Authentication.Domain\Authentication.Domain.csproj" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
+    <ProjectReference Include="..\Authentication.Data\Authentication.Data.csproj" />
   </ItemGroup>
 
 </Project>

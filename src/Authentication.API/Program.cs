@@ -2,7 +2,6 @@ using Authentication.Data.Context;
 using Authentication.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 
