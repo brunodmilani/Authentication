@@ -28,19 +28,15 @@ namespace Authentication.Domain.Services
                 EmailConfirmed = true
             };
 
-            return await _userManager.CreateAsync(user, usuario.Password);
+            var result = await _userManager.CreateAsync(user, usuario.Password);
+            if (result.Succeeded)
+                await _userManager.SetLockoutEnabledAsync(user, false);
+            return result;
         }
 
         public async Task<SignInResult> EntrarAsync(LoginRequest usuario)
         {
-            var user = new Usuario
-            {
-                UserName = usuario.UserName,
-                Email = usuario.Email,
-                EmailConfirmed = true
-            };
-
-            return await _signInManager.PasswordSignInAsync(usuario.Email, usuario.ConfirmPassword, false, true);
+            return await _signInManager.PasswordSignInAsync(usuario.UserName, usuario.Password, false, true);
         }
     }
 }
