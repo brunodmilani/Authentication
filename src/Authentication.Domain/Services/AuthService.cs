@@ -25,7 +25,7 @@ namespace Authentication.Domain.Services
             { 
                 UserName = usuario.UserName,
                 Email = usuario.Email,
-                EmailConfirmed = true
+                EmailConfirmed = false
             };
 
             return await _userManager.CreateAsync(user, usuario.Password);
@@ -33,14 +33,7 @@ namespace Authentication.Domain.Services
 
         public async Task<SignInResult> EntrarAsync(LoginRequest usuario)
         {
-            var user = new Usuario
-            {
-                UserName = usuario.UserName,
-                Email = usuario.Email,
-                EmailConfirmed = true
-            };
-
-            return await _signInManager.PasswordSignInAsync(usuario.Email, usuario.ConfirmPassword, false, true);
+            return await _signInManager.PasswordSignInAsync(usuario.UserName, usuario.Password, false, true);
         }
     }
 }
