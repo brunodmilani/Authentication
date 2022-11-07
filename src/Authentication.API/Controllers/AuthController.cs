@@ -1,5 +1,5 @@
-﻿using Authentication.Application.Dtos;
-using Authentication.Domain.Interfaces.Services;
+﻿using Authentication.Application.Dtos.Request;
+using Authentication.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Authentication.API.Controllers
@@ -25,8 +25,8 @@ namespace Authentication.API.Controllers
             return BadRequest(result);
         }
 
-        [HttpPost("registrar")]
-        public async Task<IActionResult> RegistrarAsync(UserRequest usuario)
+        [HttpPost("register")]
+        public async Task<IActionResult> RegistrarAsync(CreateUserRequest usuario)
         {
             var result = await _service.RegistrarAsync(usuario);
             if (result.Succeeded)

@@ -1,5 +1,5 @@
-﻿using Authentication.Application.Dtos;
-using Authentication.Domain.Interfaces.Services;
+﻿using Authentication.Application.Dtos.Request;
+using Authentication.Application.Interfaces.Services;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Domain.Services
@@ -18,11 +18,11 @@ namespace Authentication.Domain.Services
             _userManager = userManager;
         }
 
-        public async Task<IdentityResult> RegistrarAsync(UserRequest usuario)
+        public async Task<IdentityResult> RegistrarAsync(CreateUserRequest usuario)
         {
             var user = new IdentityUser
             { 
-                UserName = usuario.UserName,
+                UserName = usuario.Email,
                 Email = usuario.Email,
                 EmailConfirmed = false
             };
@@ -35,7 +35,7 @@ namespace Authentication.Domain.Services
 
         public async Task<SignInResult> EntrarAsync(LoginRequest usuario)
         {
-            return await _signInManager.PasswordSignInAsync(usuario.UserName, usuario.Password, false, true);
+            return await _signInManager.PasswordSignInAsync(usuario.Email, usuario.Password, false, true);
         }
     }
 }
