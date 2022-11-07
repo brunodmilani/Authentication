@@ -1,4 +1,4 @@
-﻿namespace Authentication.Shared.Dto
+﻿namespace Authentication.Application.Dtos
 {
     public class UserRequest
     {

@@ -1,5 +1,5 @@
-﻿using Authentication.Domain.Interfaces.Services;
-using Authentication.Shared.Dto;
+﻿using Authentication.Application.Dtos;
+using Authentication.Domain.Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Authentication.API.Controllers

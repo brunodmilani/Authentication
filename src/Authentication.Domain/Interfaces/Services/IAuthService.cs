@@ -1,4 +1,4 @@
-﻿using Authentication.Shared.Dto;
+﻿using Authentication.Application.Dtos;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Domain.Interfaces.Services

@@ -1,18 +1,17 @@
-﻿using Authentication.Domain.Entities;
+﻿using Authentication.Application.Dtos;
 using Authentication.Domain.Interfaces.Services;
-using Authentication.Shared.Dto;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Domain.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly SignInManager<Usuario> _signInManager;
-        private readonly UserManager<Usuario> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
         public AuthService(
-            SignInManager<Usuario> signInManager, 
-            UserManager<Usuario> userManager
+            SignInManager<IdentityUser> signInManager, 
+            UserManager<IdentityUser> userManager
             )
         {
             _signInManager = signInManager;
@@ -21,7 +20,7 @@ namespace Authentication.Domain.Services
 
         public async Task<IdentityResult> RegistrarAsync(UserRequest usuario)
         {
-            var user = new Usuario
+            var user = new IdentityUser
             { 
                 UserName = usuario.UserName,
                 Email = usuario.Email,

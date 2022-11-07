@@ -1,5 +1,5 @@
 ﻿using Authentication.Data.Context;
-using Authentication.Shared.Base;
+using Authentication.Domain.Entities.Shared;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

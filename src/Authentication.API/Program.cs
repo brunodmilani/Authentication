@@ -16,7 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
     .EnableDetailedErrors());
 
 builder.Services.AddAuthentication();
-builder.Services.AddIdentity<Usuario, Role>(o =>
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(o =>
 {
     o.Password.RequireDigit = false;
     o.Password.RequireLowercase = false;

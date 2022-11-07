@@ -22,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Authentication.Shared\Authentication.Shared.csproj" />
+    <ProjectReference Include="..\Authentication.Application\Authentication.Application.csproj" />
+    <ProjectReference Include="..\Authentication.Shared\Authentication.Application.csproj" />
   </ItemGroup>
 
 </Project>
