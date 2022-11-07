@@ -25,7 +25,7 @@ namespace Authentication.Domain.Services
             { 
                 UserName = usuario.UserName,
                 Email = usuario.Email,
-                EmailConfirmed = true
+                EmailConfirmed = false
             };
 
             var result = await _userManager.CreateAsync(user, usuario.Password);
