@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  authentication:
-    image: ${DOCKER_REGISTRY-}authentication
+  authentication.api:
+    image: ${DOCKER_REGISTRY-}authenticationapi
     build:
       context: .
-      dockerfile: Authentication/Dockerfile
+      dockerfile: src/Authentication.API/Dockerfile
