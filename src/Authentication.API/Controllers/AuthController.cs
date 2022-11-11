@@ -19,8 +19,8 @@ namespace Authentication.API.Controllers
         public async Task<IActionResult> EntrarAsync(LoginRequest usuario)
         {
             var result = await _service.EntrarAsync(usuario);
-            if (result.Succeeded)
-                return Ok();
+            if (result.Success)
+                return Ok(result);
 
             return BadRequest(result);
         }
@@ -29,8 +29,8 @@ namespace Authentication.API.Controllers
         public async Task<IActionResult> RegistrarAsync(CreateUserRequest usuario)
         {
             var result = await _service.RegistrarAsync(usuario);
-            if (result.Succeeded)
-                return Ok();
+            if (result.Success)
+                return Ok(result);
 
             return BadRequest(result);
         }

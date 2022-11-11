@@ -1,11 +1,12 @@
 ﻿using Authentication.Shared.Dtos.Request;
+using Authentication.Shared.Dtos.Response;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Shared.Interfaces.Services
 {
     public interface IAuthService
     {
-        Task<IdentityResult> RegistrarAsync(CreateUserRequest usuario);
-        Task<SignInResult> EntrarAsync(LoginRequest usuario);
+        Task<CreateUserResponse> RegistrarAsync(CreateUserRequest usuario);
+        Task<LoginResponse> EntrarAsync(LoginRequest usuario);
     }
 }
