@@ -1,4 +1,4 @@
-﻿namespace Authentication.Application.Dtos.Response
+﻿namespace Authentication.Shared.Dtos.Response
 {
     public class CreateUserResponse
     {

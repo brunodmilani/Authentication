@@ -1,4 +1,4 @@
-﻿using Authentication.Application.Interfaces.Services;
+﻿using Authentication.Shared.Interfaces.Services;
 using Authentication.Data.Context;
 using Authentication.Domain.Services;
 using Microsoft.AspNetCore.Identity;

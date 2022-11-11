@@ -1,4 +1,4 @@
-﻿namespace Authentication.Application.Dtos.Shared
+﻿namespace Authentication.Shared.Dtos.Shared
 {
     public class DtoBase
     {

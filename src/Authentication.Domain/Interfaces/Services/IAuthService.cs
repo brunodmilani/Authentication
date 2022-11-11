@@ -1,7 +1,7 @@
-﻿using Authentication.Application.Dtos.Request;
+﻿using Authentication.Shared.Dtos.Request;
 using Microsoft.AspNetCore.Identity;
 
-namespace Authentication.Application.Interfaces.Services
+namespace Authentication.Shared.Interfaces.Services
 {
     public interface IAuthService
     {

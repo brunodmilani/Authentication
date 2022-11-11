@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Domain", "sr
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{74B2980F-37C6-4064-9258-7F8A0AAA127C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Application", "src\Authentication.Application\Authentication.Application.csproj", "{C9D7AD00-1C00-4817-8928-BB92F8A360F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Shared", "src\Authentication.Shared\Authentication.Shared.csproj", "{58AE84A7-533A-449E-9740-8D944216F8D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +37,10 @@ Global
 		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9D7AD00-1C00-4817-8928-BB92F8A360F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9D7AD00-1C00-4817-8928-BB92F8A360F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9D7AD00-1C00-4817-8928-BB92F8A360F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9D7AD00-1C00-4817-8928-BB92F8A360F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AE84A7-533A-449E-9740-8D944216F8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AE84A7-533A-449E-9740-8D944216F8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AE84A7-533A-449E-9740-8D944216F8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AE84A7-533A-449E-9740-8D944216F8D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,7 +49,7 @@ Global
 		{1DB49C27-0245-4AEF-8338-FE4C34CE3D7F} = {F02FBDE5-7E22-4896-BF32-5C0EE3D55D0B}
 		{9D9E5219-997B-4A5A-B5E1-B650DDC893CE} = {F02FBDE5-7E22-4896-BF32-5C0EE3D55D0B}
 		{6BA00BFC-8035-43DC-908B-69F8DE4A3FFB} = {F02FBDE5-7E22-4896-BF32-5C0EE3D55D0B}
-		{C9D7AD00-1C00-4817-8928-BB92F8A360F3} = {F02FBDE5-7E22-4896-BF32-5C0EE3D55D0B}
+		{58AE84A7-533A-449E-9740-8D944216F8D8} = {F02FBDE5-7E22-4896-BF32-5C0EE3D55D0B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4168251A-A8C0-4596-849A-764B53F41699}

@@ -1,5 +1,5 @@
-﻿using Authentication.Application.Dtos.Request;
-using Authentication.Application.Interfaces.Services;
+﻿using Authentication.Shared.Dtos.Request;
+using Authentication.Shared.Interfaces.Services;
 using Microsoft.AspNetCore.Identity;
 
 namespace Authentication.Domain.Services
