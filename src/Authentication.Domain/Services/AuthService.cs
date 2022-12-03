@@ -28,7 +28,7 @@ namespace Authentication.Domain.Services
         {
             var identityUser = new IdentityUser
             {
-                UserName = createUserRequest.Email,
+                UserName = createUserRequest.UserName,
                 Email = createUserRequest.Email,
                 EmailConfirmed = true
             };
@@ -46,7 +46,8 @@ namespace Authentication.Domain.Services
 
         public async Task<LoginResponse> EntrarAsync(LoginRequest loginRequest)
         {
-            var result = await _signInManager.PasswordSignInAsync(loginRequest.Email, loginRequest.Password, false, true);
+            var user = await _userManager.FindByEmailAsync(loginRequest.Email);
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, loginRequest.Password, false, true);
 
             if (result.Succeeded)
                 return await GerarCredenciais(loginRequest.Email);
@@ -103,6 +104,7 @@ namespace Authentication.Domain.Services
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                new Claim(JwtRegisteredClaimNames.Name, user.UserName),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Nbf, DateTime.Now.ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.Now.ToString())
