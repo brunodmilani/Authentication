@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Data", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Domain", "src\Authentication.Domain\Authentication.Domain.csproj", "{6BA00BFC-8035-43DC-908B-69F8DE4A3FFB}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{74B2980F-37C6-4064-9258-7F8A0AAA127C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authentication.Shared", "src\Authentication.Shared\Authentication.Shared.csproj", "{58AE84A7-533A-449E-9740-8D944216F8D8}"
 EndProject
 Global
@@ -33,10 +31,6 @@ Global
 		{6BA00BFC-8035-43DC-908B-69F8DE4A3FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA00BFC-8035-43DC-908B-69F8DE4A3FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA00BFC-8035-43DC-908B-69F8DE4A3FFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74B2980F-37C6-4064-9258-7F8A0AAA127C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58AE84A7-533A-449E-9740-8D944216F8D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58AE84A7-533A-449E-9740-8D944216F8D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AE84A7-533A-449E-9740-8D944216F8D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
