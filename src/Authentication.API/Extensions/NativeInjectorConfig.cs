@@ -10,7 +10,7 @@ namespace Authentication.API.Extensions
     {
         public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Authentication.Data"))
+            services.AddDbContext<AppDbContext>(options => options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Authentication.Data"))
             .EnableSensitiveDataLogging()
             .EnableDetailedErrors());
 
