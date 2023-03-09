@@ -11,7 +11,9 @@ namespace Authentication.API.Extensions
         public static void AddAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
             var jwtAppSettingOptions = configuration.GetSection(nameof(JwtOptions));
-            var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetSection("JwtOptions:SecurityKey").Value));
+            Console.WriteLine(jwtAppSettingOptions["SecurityKey"]);
+            var securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtAppSettingOptions["SecurityKey"]));
+            //var securityKey1 = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(configuration.GetSection("JwtOptions:SecurityKey").Value));
 
             services.Configure<JwtOptions>(options =>
             {
